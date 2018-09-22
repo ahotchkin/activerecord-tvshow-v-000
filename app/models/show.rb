@@ -7,7 +7,8 @@ class Show < ActiveRecord::Base
 
   def self.most_popular_show
     # Show.where(self.highest_rating).take
-    Show.order(rating: :desc).take
+    # Show.order(rating: :desc).take
+    Show(highest_rating)
   end
 
   def self.lowest_rating
